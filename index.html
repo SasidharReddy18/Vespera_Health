@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Vespera Health patient services and appointment portal.">
+  <meta name="theme-color" content="#261d2b">
+  <title>Vespera Health | Patient Care Portal</title>
+  <link rel="stylesheet" href="clinic.css">
+  <script src="clinic.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <a class="identity" href="#home" aria-label="Vespera Health home">
+      <span class="identity-mark" aria-hidden="true">V</span>
+      <span><strong>VESPERA</strong><small>HEALTH COLLECTIVE</small></span>
+    </a>
+    <nav class="primary-nav" aria-label="Main navigation">
+      <a href="#care">Our care</a>
+      <a href="#specialists">Specialists</a>
+      <a href="#appointment">Appointments</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">THOUGHTFUL CARE, CLEARER TOMORROWS</p>
+        <h1 id="hero-title">Your health deserves a little more attention.</h1>
+        <p class="hero-summary">Find the right specialist, explore our care services and request a visit with a team that listens first.</p>
+        <a class="primary-link" href="#appointment">Request an appointment <span aria-hidden="true">↗</span></a>
+      </div>
+      <aside class="hero-note" aria-label="Care promise">
+        <span class="note-orbit" aria-hidden="true">✳</span>
+        <p class="eyebrow">THE VESPERA PROMISE</p>
+        <h2>People before paperwork.</h2>
+        <p>Clear guidance, considerate conversations and care shaped around each patient.</p>
+      </aside>
+    </section>
+
+    <section class="care-section" id="care" aria-labelledby="care-title">
+      <div class="section-intro">
+        <p class="eyebrow">A CONNECTED APPROACH</p>
+        <h2 id="care-title">Care for the whole picture.</h2>
+        <p>Explore a few of the services available through our patient care team.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service-card service-one">
+          <span class="service-index" aria-hidden="true">01</span>
+          <p class="card-kicker">PREVENT / UNDERSTAND</p>
+          <h3>General Medicine</h3>
+          <p>Routine consultations, preventive guidance and support for everyday health concerns.</p>
+        </article>
+        <article class="service-card service-two">
+          <span class="service-index" aria-hidden="true">02</span>
+          <p class="card-kicker">LISTEN / RESTORE</p>
+          <h3>Cardiac Care</h3>
+          <p>Heart-health assessment and follow-up conversations with experienced clinicians.</p>
+        </article>
+        <article class="service-card service-three">
+          <span class="service-index" aria-hidden="true">03</span>
+          <p class="card-kicker">MOVE / RECOVER</p>
+          <h3>Orthopaedics</h3>
+          <p>Assessment and care planning for bones, joints, mobility and recovery.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="specialist-section" id="specialists" aria-labelledby="specialist-title">
+      <div>
+        <p class="eyebrow">MEET YOUR CARE TEAM</p>
+        <h2 id="specialist-title">Expertise with a human touch.</h2>
+      </div>
+      <div class="specialist-list">
+        <article class="specialist">
+          <span class="specialist-number">A / 01</span>
+          <div><h3>Dr. Mira Sen</h3><p>General Medicine · Patient consultations</p></div>
+        </article>
+        <article class="specialist">
+          <span class="specialist-number">B / 02</span>
+          <div><h3>Dr. Arjun Rao</h3><p>Cardiology · Heart-health reviews</p></div>
+        </article>
+        <article class="specialist">
+          <span class="specialist-number">C / 03</span>
+          <div><h3>Dr. Leela Nair</h3><p>Orthopaedics · Mobility and recovery</p></div>
+        </article>
+      </div>
+      <p class="disclaimer">Demonstration profiles for this academic project.</p>
+    </section>
+
+    <section class="appointment-section" id="appointment" aria-labelledby="appointment-title">
+      <div class="appointment-intro">
+        <p class="eyebrow">LET'S FIND A TIME</p>
+        <h2 id="appointment-title">Request your appointment.</h2>
+        <p>Complete the details below. Fields marked with an asterisk are required.</p>
+        <div class="appointment-aside">
+          <span aria-hidden="true">✳</span>
+          <p><strong>A small note</strong><br>Submitting this demonstration form shows an on-page confirmation. It does not send medical information to a hospital.</p>
+        </div>
+      </div>
+
+      <form id="patientForm" class="patient-form">
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="patientName">Full name <span aria-hidden="true">*</span></label>
+            <input id="patientName" name="patientName" type="text" autocomplete="name"
+                   placeholder="e.g. Ananya Rao" required minlength="2">
+          </div>
+          <div class="form-field">
+            <label for="patientEmail">Email address <span aria-hidden="true">*</span></label>
+            <input id="patientEmail" name="patientEmail" type="email" autocomplete="email"
+                   placeholder="you@example.com" required>
+          </div>
+          <div class="form-field">
+            <label for="patientPhone">Phone number <span aria-hidden="true">*</span></label>
+            <input id="patientPhone" name="patientPhone" type="tel" autocomplete="tel"
+                   inputmode="tel" pattern="[0-9 +()-]{10,16}"
+                   placeholder="10-digit contact number" required>
+          </div>
+          <div class="form-field">
+            <label for="department">Department <span aria-hidden="true">*</span></label>
+            <select id="department" name="department" required>
+              <option value="">Choose a department</option>
+              <option value="General Medicine">General Medicine</option>
+              <option value="Cardiology">Cardiology</option>
+              <option value="Orthopaedics">Orthopaedics</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="visitDate">Preferred date <span aria-hidden="true">*</span></label>
+            <input id="visitDate" name="visitDate" type="date" required>
+          </div>
+          <div class="form-field">
+            <label for="visitTime">Preferred time <span aria-hidden="true">*</span></label>
+            <select id="visitTime" name="visitTime" required>
+              <option value="">Choose a time slot</option>
+              <option>09:00 AM – 11:00 AM</option>
+              <option>11:00 AM – 01:00 PM</option>
+              <option>02:00 PM – 04:00 PM</option>
+              <option>04:00 PM – 06:00 PM</option>
+            </select>
+          </div>
+        </div>
+
+        <fieldset class="visit-choice">
+          <legend>Appointment type <span aria-hidden="true">*</span></legend>
+          <label><input type="radio" name="visitType" value="First visit" required> First visit</label>
+          <label><input type="radio" name="visitType" value="Follow-up"> Follow-up</label>
+        </fieldset>
+
+        <div class="form-field">
+          <label for="patientNote">Additional note <span class="optional">(optional)</span></label>
+          <textarea id="patientNote" name="patientNote" rows="3"
+                    placeholder="Share a brief note for the care team."></textarea>
+        </div>
+
+        <label class="consent-line">
+          <input type="checkbox" id="consent" name="consent" required>
+          <span>I confirm that the details entered are accurate. <span aria-hidden="true">*</span></span>
+        </label>
+
+        <button class="submit-button" type="submit">Send appointment request <span aria-hidden="true">↗</span></button>
+        <p id="formStatus" class="form-status" role="status" aria-live="polite" tabindex="-1"></p>
+      </form>
+    </section>
+
+    <aside class="closing-panel" aria-label="Patient information">
+      <strong>Need assistance?</strong>
+      <p>For this demonstration, use the appointment form to explore accessible input controls and validation behaviour.</p>
+    </aside>
+  </main>
+
+  <footer id="contact">
+    <div><strong>VESPERA HEALTH</strong><p>Considerate care. Thoughtful connections.</p></div>
+    <div><p>Patient support: hello@vespera.example</p><p class="footer-small">© 2026 Vespera Health · Academic demonstration</p></div>
+  </footer>
+</body>
+</html>
